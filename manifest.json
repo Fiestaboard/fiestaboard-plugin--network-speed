@@ -1,0 +1,76 @@
+{
+  "id": "network_speed",
+  "name": "Network Speed",
+  "version": "0.1.0",
+  "description": "Display your internet connection speed using a local Speedtest CLI check.",
+  "author": "FiestaBoard Team",
+  "icon": "gauge",
+  "category": "utility",
+  "repository": "https://github.com/Fiestaboard/fiestaboard-plugin--network-speed",
+  "documentation": "README.md",
+  "min_refresh_seconds": 1800,
+  "settings_schema": {
+    "type": "object",
+    "properties": {
+      "enabled": {
+        "type": "boolean",
+        "title": "Enabled",
+        "default": false
+      },
+      "refresh_seconds": {
+        "type": "integer",
+        "title": "Refresh Interval (seconds)",
+        "description": "How often to run a speed test. Tests take 20\u201360 seconds; minimum 1800s.",
+        "default": 3600,
+        "minimum": 1800
+      }
+    },
+    "required": []
+  },
+  "variables": {
+    "groups": {
+      "speed": {
+        "label": "Speed Test"
+      }
+    },
+    "simple": {
+      "download_mbps": {
+        "description": "Download speed in Mbps",
+        "type": "number",
+        "max_length": 8,
+        "group": "speed",
+        "example": "250.4"
+      },
+      "upload_mbps": {
+        "description": "Upload speed in Mbps",
+        "type": "number",
+        "max_length": 8,
+        "group": "speed",
+        "example": "18.7"
+      },
+      "ping_ms": {
+        "description": "Latency in milliseconds",
+        "type": "number",
+        "max_length": 7,
+        "group": "speed",
+        "example": "14.3"
+      },
+      "last_tested": {
+        "description": "Timestamp of the last speed test",
+        "type": "string",
+        "max_length": 16,
+        "group": "speed",
+        "example": "2026-05-01 12:00"
+      }
+    }
+  },
+  "screenshots": [
+    {
+      "src": "docs/board-display.png",
+      "alt": "Network Speed displayed on a Vestaboard",
+      "caption": "Example board output using the default template",
+      "primary": true
+    }
+  ],
+  "api_docs": "https://github.com/sivel/speedtest-cli"
+}
