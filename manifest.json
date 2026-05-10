@@ -1,7 +1,7 @@
 {
   "id": "network_speed",
   "name": "Network Speed",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Display your internet connection speed using a local Speedtest CLI check.",
   "author": "FiestaBoard Team",
   "icon": "gauge",
@@ -20,7 +20,7 @@
       "refresh_seconds": {
         "type": "integer",
         "title": "Refresh Interval (seconds)",
-        "description": "How often to run a speed test. Tests take 20\u201360 seconds; minimum 1800s.",
+        "description": "How often to run a speed test. Tests take 20–60 seconds; minimum 1800s.",
         "default": 3600,
         "minimum": 1800
       }
@@ -72,5 +72,47 @@
       "primary": true
     }
   ],
-  "api_docs": "https://github.com/sivel/speedtest-cli"
+  "api_docs": "https://github.com/sivel/speedtest-cli",
+  "demo": {
+    "name": "Network Speed Demo",
+    "device_type": "flagship",
+    "config": {
+      "enabled": true,
+      "refresh_seconds": 3600
+    },
+    "template": [
+      "Network Speed",
+      "",
+      "Down: {{network_speed.download_mbps}} Mbps",
+      "Up:   {{network_speed.upload_mbps}} Mbps",
+      "Ping: {{network_speed.ping_ms}} ms",
+      "{{network_speed.last_tested}}"
+    ],
+    "line_metadata": [
+      {
+        "alignment": "center",
+        "wrap": false
+      },
+      {
+        "alignment": "left",
+        "wrap": false
+      },
+      {
+        "alignment": "left",
+        "wrap": false
+      },
+      {
+        "alignment": "left",
+        "wrap": false
+      },
+      {
+        "alignment": "left",
+        "wrap": false
+      },
+      {
+        "alignment": "left",
+        "wrap": false
+      }
+    ]
+  }
 }
