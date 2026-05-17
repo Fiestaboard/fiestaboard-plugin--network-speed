@@ -1,7 +1,7 @@
 {
   "id": "network_speed",
   "name": "Network Speed",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Display your internet connection speed using a local Speedtest CLI check.",
   "author": "FiestaBoard Team",
   "icon": "gauge",
