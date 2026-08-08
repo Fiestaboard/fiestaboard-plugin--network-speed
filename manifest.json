@@ -20,7 +20,7 @@
       "refresh_seconds": {
         "type": "integer",
         "title": "Refresh Interval (seconds)",
-        "description": "How often to run a speed test. Tests take 20\u201360 seconds; minimum 1800s.",
+        "description": "How often to run a speed test. Tests take 20–60 seconds; minimum 1800s.",
         "default": 3600,
         "minimum": 1800
       }
@@ -70,6 +70,28 @@
       "alt": "Network Speed displayed on a Vestaboard",
       "caption": "Example board output using the default template",
       "primary": true
+    }
+  ],
+  "teaser": "DN 250 UP 19",
+  "previews": [
+    {
+      "device_type": "flagship",
+      "rows": [
+        "    Network Speed",
+        "",
+        "Down: 250.4 Mbps",
+        "Up:   18.7 Mbps",
+        "Ping: 14.3 ms",
+        "2026-05-01 12:00"
+      ]
+    },
+    {
+      "device_type": "note",
+      "rows": [
+        "NETWORK SPEED",
+        "DN 250.4 MBPS",
+        "UP 18.7 MBPS"
+      ]
     }
   ],
   "api_docs": "https://github.com/sivel/speedtest-cli",
