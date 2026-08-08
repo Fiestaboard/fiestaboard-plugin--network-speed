@@ -88,9 +88,9 @@
     {
       "device_type": "note",
       "rows": [
-        "NETWORK SPEED",
-        "DN 250.4 MBPS",
-        "UP 18.7 MBPS"
+        "{66}DN 250.4 MBPS",
+        "{65}UP  18.7 MBPS",
+        "PING 12 MS"
       ]
     }
   ],
